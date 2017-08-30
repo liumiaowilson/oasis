@@ -18,12 +18,12 @@ function msg {
 
 if [[ "$action" == "" ]];then
     helpApp
-    exit -1
+    exit 1
 fi
 
 if [[ ! -f ./env.sh ]];then
     msg "Scripts should be run in the oasis directory."
-    exit -1
+    exit 1
 fi
 
 source ./env.sh
@@ -36,7 +36,7 @@ function invoke {
 
     if [[ "$script" == "" ]];then
         msg "Script is required."
-        exit -1
+        exit 1
     fi
 
     if [[ -f $script ]];then
@@ -47,7 +47,7 @@ function invoke {
             return 0
         else
             debug "[$script] executed abnormally with args [$args]."
-            return -1
+            return 1
         fi
     else
         msg "[$script] does not exist and is hence skipped."
@@ -197,7 +197,7 @@ function validateEnv {
     for i in "${depends[@]}"; do
         if ! type $i > /dev/null 2>&1; then
             msg "[$i] should be installed."
-            exit -1
+            exit 1
         fi
     done
 }
