@@ -1,8 +1,10 @@
 #!/bin/bash
 # Scripts used to start the app
-name=$1
+app=$1
 port=$2
-cwd=$OASIS_HOME/apps/$name
-log=$OASIS_HOME/data/$name/server.log
+appHome=$OASIS_HOME/apps/$app
+controlHome=$OASIS_HOME/controls/$app
+dataHome=$OASIS_HOME/data/$app
+log=$dataHome/server.log
 
-nohup http-server $cwd -p $port > $log 2>&1 &
+nohup http-server $appHome -p $port > $log 2>&1 &
