@@ -50,7 +50,7 @@ function invoke {
             return 1
         fi
     else
-        msg "[$script] does not exist and is hence skipped."
+        debug "[$script] does not exist and is hence skipped."
         return 0
     fi
 }
