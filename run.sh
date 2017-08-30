@@ -1,4 +1,4 @@
 #!/bin/bash
-./update.sh
+./update.sh $@
 
-./start.sh
+./start.sh $@

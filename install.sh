@@ -1,4 +1,4 @@
 #!/bin/bash
-./init.sh
+./init.sh $@
 
-./import.sh
+./import.sh $@
