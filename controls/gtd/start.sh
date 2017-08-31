@@ -17,4 +17,4 @@ else
     exit 1
 fi
 
-nohup $wikiAppHome/tiddlywiki.js $gtdData --load $appHome/cardo.html --server $port $:/core/save/all text/plain text/html "$gtd_username" "$gtd_password" 0.0.0.0 > $log 2>&1 &
+nohup $wikiAppHome/tiddlywiki.js $gtdData --load $appHome/cardo.html --server $port $:/core/save/lazy-all text/plain text/html "$gtd_username" "$gtd_password" 0.0.0.0 > $log 2>&1 &
