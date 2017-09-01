@@ -15,4 +15,4 @@ else
     exit 1
 fi
 
-nohup $appHome/tiddlywiki.js $wikiData --server $port $:/core/save/lazy-all text/plain text/html "$wiki_username" "$wiki_password" 0.0.0.0 > $log 2>&1 &
+nohup $appHome/tiddlywiki.js $wikiData --server $port $:/core/save/lazy-images text/plain text/html "$wiki_username" "$wiki_password" 0.0.0.0 > $log 2>&1 &
