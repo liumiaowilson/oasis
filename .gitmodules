@@ -1,3 +1,6 @@
 [submodule "apps/wiki"]
 	path = apps/wiki
 	url = https://github.com/liumiaowilson/TiddlyWiki5.git
+[submodule "apps/world"]
+	path = apps/world
+	url = https://github.com/liumiaowilson/ranviermud.git
