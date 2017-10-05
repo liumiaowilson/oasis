@@ -7,8 +7,8 @@ dataHome=$OASIS_HOME/data/$app
 
 cd $appHome && git submodule update --init --recursive
 
-mkdir -p $dataHome/data
-cp -r $appHome/data/ $dataHome/data
+mkdir -p $dataHome
+ln -s $appHome/data $dataHome/data
 
 cp $controlHome/env.sh $dataHome/env.sh
 echo "*** Please update [$dataHome/env.sh] ***"
